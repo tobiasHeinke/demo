@@ -1,4 +1,4 @@
-######1.
+######plain 
 RST only  
 Sections list to Panels: resizable table "list-table"  
 Some content move around  
@@ -6,7 +6,7 @@ link to blender.org: static table "+-----+-----+"
   
 ![img link broken](/images/home_panel.png "home panel")  
   
-######2.
+######real
 RST + CSS  
 Panels & blender.org: flex box  
 hide manual titel: "Blender Manual Contents"  
