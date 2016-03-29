@@ -1,6 +1,6 @@
 #####Custom toctree
 
-![img link broken](/images/fx_tree_mesh.png "tree fx")
+![img link broken](/images/fx_tree.PNG "tree fx")
   
 ######Design: color code 
 Has to show level: is done by grouping in frames
