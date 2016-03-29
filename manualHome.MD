@@ -17,7 +17,3 @@ Panel colors: work in progress
 
 Next step warm it up with an images of a certain bunny (|__/)  
 Blender.org: "Blender" to (Blender logo)
-
-  
-######Flex-box on every tree (might be possible)  
-![img link broken](/images/fx_tree_mesh.png "tree fx")
