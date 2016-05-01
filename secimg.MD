@@ -1,3 +1,4 @@
+# Home Section Description and Images
   
 ![img doesn't work](/images/section_image.png "secimg")  
 Source:  
