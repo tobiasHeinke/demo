@@ -4,6 +4,7 @@ import os, sys, re
 
 #search root dir
 inputDir = " -path to- /manual"
+#inputDir = " -path to test- "
 
 #html page with a "%output%"  text node in the body 
 tempDir = " -path to template- "
