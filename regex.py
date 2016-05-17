@@ -25,7 +25,7 @@ def switchSR(filePath, filename, matchOut):
 	return fmatch
 
 def search(filePath, filename, matchOut):
-	fl = open(filePath+'/'+ filename, 'r', encoding="utf-8-sig")
+	fl = open(filePath+'/'+ filename, 'r', encoding="utf-8")
 	fContent = fl.read()
 	
 	pattern = re.compile(patternStr, re.MULTILINE)
@@ -46,7 +46,7 @@ def search(filePath, filename, matchOut):
 
 def replace(filePath, filename, matchOut):
 	if "repStr" in globals():
-		fl = open(filePath+'/'+ filename, 'r+', encoding="utf-8-sig")
+		fl = open(filePath+'/'+ filename, 'r+', encoding="utf-8")
 		fContent = fl.read()
 		
 		#pattern = re.compile(patternStr, re.MULTILINE)
