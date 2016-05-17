@@ -21,12 +21,12 @@ patternStr = r"(?:^|\s)(?:\*){1,1}([\w|\s|\/]+)(?:\*)"
 
 def switchSR(filePath, filename, matchOut):
 	fmatch = search(filePath, filename, matchOut)
-	#fmatch = replace(filePath, filename)
+	#fmatch = replace(filePath, filename, matchOut)
 	return fmatch
 
 def search(filePath, filename, matchOut):
-	file = open(filePath+'/'+ filename, 'r', encoding="utf-8-sig")
-	fContent = file.read()
+	fl = open(filePath+'/'+ filename, 'r', encoding="utf-8-sig")
+	fContent = fl.read()
 	
 	pattern = re.compile(patternStr, re.MULTILINE)
 	
@@ -35,29 +35,34 @@ def search(filePath, filename, matchOut):
 	#remove duplicates in file scope
 	fmatch = checkSinguOuter(fmatch, fmatch, True)
 	#remove duplicates in global scope
-	fmatch = checkSinguOuter(matchOut, fmatch, False)
+	#out of order: quasi-multi dim. list
+	#fmatch = checkSinguOuter(matchOut, fmatch, False)
 		
-	file.close()
-	return fmatch
+	fl.close()
+	if len(fmatch) > 0:
+		fmatch.append(str(len(fmatch))+" | "+filePath+'/'+ filename)
+		matchOut.append(fmatch)
+	return matchOut
 
-def replace(filePath, filename):
+def replace(filePath, filename, matchOut):
 	if "repStr" in globals():
-		file = open(filePath+'/'+ filename, 'r+', encoding="utf-8-sig")
-		fContent = file.read()
+		fl = open(filePath+'/'+ filename, 'r+', encoding="utf-8-sig")
+		fContent = fl.read()
 		
-		pattern = re.compile(patternStr, re.MULTILINE)
+		#pattern = re.compile(patternStr, re.MULTILINE)
 		#replc = re.compile(repStr, re.MULTILINE)
 		
-		outText = pattern.sub(repStr, fContent)
-		
-		file.seek(0)
-		file.write(outText)
-		file.truncate()
-		file.close()
+		outTuple = re.subn(patternStr, repStr, fContent)
+
+		if outTuple[1] > 0:
+			fl.seek(0)
+			fl.write(outTuple[0])
+			fl.truncate()
+			matchOut.append([str(outTuple[1])+" | "+filePath+'/'+ filename])
+		fl.close()
 	else:
 		print("regex script: no replace string")
-
-	return ""
+	return matchOut
 
 #check if match string is duplicate 
 def checkSinguOuter(matchOut, fmatch, self):
@@ -67,7 +72,7 @@ def checkSinguOuter(matchOut, fmatch, self):
 		if self:
 			bn = checkSinguInner(matchOut, fmatch[a], a)
 		else:
-			bn = checkSinguInner(matchOut, fmatch[a], -1)			
+			bn = checkSinguInner(matchOut, fmatch[a], -1)
 		if bn:
 			fmatch.pop(a)
 		else:
@@ -102,9 +107,9 @@ def writeOut(matchOut, inputDir):
 def walkDir(inputDir):
 	matchOut = []
 	for dirpath, dnames, fnames in os.walk(inputDir):
-		for file in fnames:
-			if file.endswith(".rst"):
-				matchOut += switchSR(dirpath, file, matchOut)
+		for fl in fnames:
+			if fl.endswith(".rst"):
+				matchOut = switchSR(dirpath, fl, matchOut)
 	
 	return matchOut
 
