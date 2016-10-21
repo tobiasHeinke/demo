@@ -1,6 +1,6 @@
 # Blender Manual Ad
 
-## In General
+## Notes
 
 what it does:
 
@@ -8,12 +8,14 @@ what it does:
 
 who it's for:
 
-- Beginners
+- Beginners to experts (everyone)
 
 why it's different:
 
 - comprehensive
 - reliable source of information
+- translations
+- tech (Stats on the manual -- user and page view counts)
 
 and when and where it should be used:
 
@@ -28,6 +30,8 @@ neg:
 
 claim:
 
+- How can you help:
+- What makes you a manual author:
 - Want to support Blender as an artist.
 - A way to help Blender.
 - You love to write about CG.
@@ -38,7 +42,8 @@ claim:
 
 ### Manual:
 
-Reach a huge audience: 50 000 clicks per week/month ¿.
+Reach a huge audience: 50 000 clicks per day/week ¿.
+different experience levels of the readers
 
 
 ### Author:
@@ -56,10 +61,30 @@ pos:
 
 past conf 14: current status, issues
 
+
 ## Slides
 
 ## 1. Introduction:
 
+### Blender Manual
+
+![img link broken](/images/suzanne_tablet.jpg "suzanne reading")
+
+
+Text:
+A short message from the Blender Documentation team.
+Since half a year the migration form the wiki is finished.
+ 
+Writing the Blender Manual 
+
+
 ## 2. Call for participants:
 
-Join the Blender Manual!
+### Join the Blender Manual!
+
+![img link broken](/images/suzanne_ruler.jpg "suzanne knight")
+
+
+Text:
+
+What makes you a manual author:
