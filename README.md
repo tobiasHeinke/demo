@@ -82,7 +82,7 @@ Writing the Blender Manual
 
 ### Join the Blender Manual!
 
-![img link broken](/images/suzanne_ruler.jpg "suzanne knight")
+![img link broken](/images/suzanne_pen.jpg "suzanne knight")
 
 
 Text:
