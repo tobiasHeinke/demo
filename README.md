@@ -90,7 +90,7 @@ Text:
 A short message from the Blender Documentation team.
 Since half a year the migration form the wiki is finished.
  
-Writing the Blender Manual is fun {}.
+Writing the Blender Manual is fun ().
 
 
 ## 2. Call for participants:
@@ -99,13 +99,13 @@ Writing the Blender Manual is fun {}.
 
 - Anyone can help.
 - You know two languages? Help by translating.
-- There are {task} that not involve writing - Help by providing example images.
+- There are (task) that not involve writing - Help by providing example images.
 
 - Allows you as an artist to contribute Blender.
-- {Write for a} huge audience. 
+- (Write for a) huge audience. 
 
 - Visit the about section of the manual [1] for more informations.
-- Email the BM mailing list [2] if need help {}.
+- Email the BM mailing list [2] if need help ().
 
 [1] https://www.blender.org/manual/about/index.html
 [2] https://lists.blender.org/mailman/listinfo/bf-docboard
@@ -115,10 +115,11 @@ Writing the Blender Manual is fun {}.
 
 
 Text:
-Especially {also} for people who are specialized {in a }
+We are (desperately) looking for manual authors.
+Especially (also) for people who are specialized (in a )
 i.e rigging
 
-But also like to get feedback from the readers {community}: 
+But also like to get feedback from the readers (community): 
 something is missing (except brand new stuff),
 badly written, explained too difficult.
 
