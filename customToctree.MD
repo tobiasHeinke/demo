@@ -15,4 +15,4 @@ Note that the columns expand over the full width.
 In CSS it would have to check, if the child has no child nodes.  
 Only possible by setting classes with python.  
 
-NEW external text NEW
+NEW NEW
